@@ -73,7 +73,7 @@ class PET_Widget_Display extends WP_Widget {
          <?php echo '<div>'.$instance['filter'].'</div>' ? wpautop($text) : $text; ?>
 
          <?php if ( $r ) {  ?>
-		     <span><a href="<?php echo home_url(); ?>/?feed=rss2&amp;post_type=pet"><span class="pet_rss">RSS</span></a></span>
+		     <span><a href="<?php echo home_url(); ?>/?feed=rss2&amp;post_type=post"><span class="pet_rss">RSS</span></a></span>
          <?php } ?>
 
      		  <?php  while ($q->have_posts()) : $q->the_post(); ?>
