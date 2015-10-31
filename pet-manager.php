@@ -63,10 +63,10 @@ class PET_MANAGER {
     //pet_add_pages();
 
     //Enables Pet and Lost Types
-    $PETPostType = new PETPostType();
+    //$PETPostType = new PETPostType();
 
-		//Register the post type
-		add_action('init', array($PETPostType,'register'),3 );
+//		//Register the post type
+//		add_action('init', array($PETPostType,'register'),3 );
 
     add_action( 'init', 'pet_add_pages');
 
