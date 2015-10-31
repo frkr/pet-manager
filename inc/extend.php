@@ -261,7 +261,7 @@ function pet_search_form() {
             '<option value="0"></option>' .
             $pet_ages .
             '</select></li>' .
-            '<input type="hidden" name="post_type" value='post' />' .
+            '<input type="hidden" name="post_type" value="post" />' .
             '<br /><input type="submit" id="searchpet" name="search" value="' . __('Search pet', 'wp_pet') . '">' .
             '' .
             '' .
