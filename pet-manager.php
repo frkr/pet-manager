@@ -189,7 +189,8 @@ add_action('admin_menu', 'ada_add_pages');
 // action function for above hook
 function ada_add_pages() {
 
-add_submenu_page('edit.php?post_type=post', __('Options & About','wp_pet'), __('Options & About','wp_pet'), 'manage_options', 'pet_options_page', 'pet_options_page' );
+//add_submenu_page('edit.php?post_type=post', __('Options & About','wp_pet'), __('Options & About','wp_pet'), 'manage_options', 'pet_options_page', 'pet_options_page' );
+add_submenu_page('pet_options_page.php', __('Options & About','wp_pet'), __('Options & About','wp_pet'), 'manage_options', 'pet_options_page', 'pet_options_page' );
 
 
 }
