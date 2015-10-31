@@ -71,7 +71,7 @@ function test_if_meta($arr, $key, $before = '', $after = '') {
 //Add post pet to author page
 function custom_post_author_archive($query) {
     if ($query->is_author)
-        $query->set('post_type', array('pet', 'post'));
+        $query->set('post_type', array('post', 'post'));
     remove_action('pre_get_posts', 'custom_post_author_archive');
 }
 
@@ -140,11 +140,11 @@ function place_special_pet_content($content) {
     }
 
 
-    if ('pet' == get_post_type() && is_single() && is_main_query()) {
+    if ('post' == get_post_type() && is_single() && is_main_query()) {
         return $special . $content . $extrapet;
     }
 
-    if ('pet' == get_post_type() && is_archive() && is_main_query()) {
+    if ('post' == get_post_type() && is_archive() && is_main_query()) {
         return $special;
     }
 
@@ -188,7 +188,7 @@ add_action('wp_footer', 'pet_know_performance', 20);
 function pet_change_default_title($title) {
     $screen = get_current_screen();
 
-    if ('pet' == $screen->post_type) {
+    if ('post' == $screen->post_type) {
         $title = __('Enter pet name here', 'wp_pet');
     }
 
@@ -202,7 +202,7 @@ add_filter('enter_title_here', 'pet_change_default_title',22);
 
 function pet_place_note($content) {
 
-    if (is_preview() && 'pet' == get_post_type())
+    if (is_preview() && 'post' == get_post_type())
         $note = '<div class="note">' . __('This post is still waiting for moderator approval.', 'wp_pet') . '<a href="' . get_edit_post_link(get_the_ID()) . '">' . __('Edit this post and add more info', 'wp_pet') . '</a></div>';
 
     return $content . $note;
@@ -261,7 +261,7 @@ function pet_search_form() {
             '<option value="0"></option>' .
             $pet_ages .
             '</select></li>' .
-            '<input type="hidden" name="post_type" value="pet" />' .
+            '<input type="hidden" name="post_type" value='post' />' .
             '<br /><input type="submit" id="searchpet" name="search" value="' . __('Search pet', 'wp_pet') . '">' .
             '' .
             '' .
@@ -290,7 +290,7 @@ function insertThumbnailRSS($content) {
     if (has_post_thumbnail($post->ID)) {
 
 
-        if ($post->post_type == 'pet') {
+        if ($post->post_type == 'post') {
             $content = '' . get_the_post_thumbnail($post->ID, 'thumbnail') . '' . $content;
         }
     }

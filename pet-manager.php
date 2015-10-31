@@ -103,8 +103,8 @@ class PET_MANAGER {
     }
 
   	function pet_remove_pets_support() {
-  		remove_post_type_support( 'pet', 'excerpt' );
-  		remove_post_type_support( 'pet', 'comments' );
+  		remove_post_type_support( 'post', 'excerpt' );
+  		remove_post_type_support( 'post', 'comments' );
   	}
 
 
@@ -232,8 +232,8 @@ if(function_exists('bp_is_active')){
 
 
     /* Don't record this if it's not a post */
-    if ( $post->post_type != 'pet' )
-                        return false;
+    /*if ( $post->post_type != 'pet' )
+                        return false;*/
 
 
     if ( 'publish' == $post->post_status && '' == $post->post_password ) {

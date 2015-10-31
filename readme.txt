@@ -1,3 +1,5 @@
+[DOWNLOAD](https://github.com/frkr/pet-manager/zipball/master)
+
 === Pet Manager ===
 Contributors: Dianakc
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dianakac%40gmail%2ecom&lc=BR&item_name=Diana%20K%2e%20C&item_number=Pet%20Manager%20%2d%20A%20WordPress%20plugin%20for%20animal%20shelters&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest

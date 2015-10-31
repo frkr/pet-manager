@@ -27,7 +27,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 	$meta_boxes[] = array(
 		'id'         => 'pet_profile',
 		'title'      => 'Pet Manager',
-		'pages'      => array( 'pet' ), // Post type
+		'pages'      => array( 'post' ), // Post type
 		'context'    => 'normal',
 		'priority'   => 'high',
 		'show_names' => true, // Show field names on the left

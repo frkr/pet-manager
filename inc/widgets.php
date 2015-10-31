@@ -63,7 +63,7 @@ class PET_Widget_Display extends WP_Widget {
         $status = isset($instance['pet-status']) ? $instance['pet-status'] : false;
         $number = isset($instance['number']) ? $instance['number'] : false;
         $category = isset($instance['pet-category']) ? $instance['pet-category'] : false;
-        $q = new WP_Query(array('post_type'=>'pet', 'posts_per_page'=>$number, 'orderby'=>$sortby, 'pet-status' => $status,'pet-category' => $category));
+        $q = new WP_Query(array('post_type'=>'post', 'posts_per_page'=>$number, 'orderby'=>$sortby, 'pet-status' => $status,'pet-category' => $category));
         ?>
 
         <?php echo $before_widget; ?>

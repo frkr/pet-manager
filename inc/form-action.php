@@ -27,7 +27,7 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) &&  $_POS
     'post_content'  =>   $description,
     'post_category' =>   array($_POST['pet_status'],$_POST['pet_category'],$_POST['pet_gender'],$_POST['pet_size'],$_POST['pet_age'],$_POST['pet_color']),
     'post_status'   =>   'pending',
-    'post_type'     =>   'pet',
+    'post_type'     =>   'post',
     'tags_input'    =>   $tags,
 
     'contact_email'	=>	$useremail,
